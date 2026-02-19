@@ -1,0 +1,430 @@
+.heroBanner {
+  background: linear-gradient(135deg, var(--teal) 0%, #1a9e94 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.heroLeft { flex: 1; }
+
+.heroBadge {
+  display: inline-flex;
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.heroDesc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  max-width: 380px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255,255,255,0.12);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  width: fit-content;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.heroStat { text-align: center; }
+
+.heroStatNum {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.heroStatLabel {
+  display: block;
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.heroStatDivider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+}
+
+.heroRight { flex-shrink: 0; margin-left: 40px; }
+
+.heroEmojis {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroEmojis span {
+  font-size: 40px;
+  background: rgba(255,255,255,0.15);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Layout grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Chat */
+.chatSection {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+}
+
+.chatHeader {
+  background: var(--teal);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chatAvatar {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.chatName {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chatStatus {
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.chatCall {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+
+.chatCall:hover { background: rgba(255,255,255,0.3); }
+
+.chatMessages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--gray-50);
+}
+
+.msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.msgUser { justify-content: flex-end; }
+.msgBot { justify-content: flex-start; }
+
+.msgAvatar {
+  font-size: 20px;
+  flex-shrink: 0;
+  background: var(--white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.msgBubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.msgBot .msgBubble {
+  background: var(--white);
+  color: var(--gray-700);
+  border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+.msgUser .msgBubble {
+  background: var(--teal);
+  color: var(--white);
+  border-bottom-right-radius: 4px;
+}
+
+.chatInput {
+  padding: 16px 20px;
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid var(--gray-100);
+  background: var(--white);
+}
+
+.chatField {
+  flex: 1;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  outline: none;
+  color: var(--gray-700);
+  transition: border-color 0.2s;
+  background: transparent;
+}
+
+.chatField:focus { border-color: var(--teal); }
+.chatField::placeholder { color: var(--gray-400); }
+
+.chatSend {
+  background: var(--teal);
+  color: var(--white);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.chatSend:hover { background: var(--teal-dark); transform: scale(1.05); }
+
+/* Right column */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--gray-100);
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 16px;
+}
+
+/* Farmacêuticos */
+.pharmList { display: flex; flex-direction: column; gap: 10px; }
+
+.pharmCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+}
+
+.pharmEmoji { font-size: 28px; }
+
+.pharmInfo { flex: 1; }
+
+.pharmName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.pharmSpec {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+.pharmRating {
+  font-size: 11px;
+  color: var(--yellow);
+  margin-top: 2px;
+}
+
+.pharmStatus {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.pharmOnline {
+  background: rgba(16,185,129,0.1);
+  color: #065f46;
+}
+
+.pharmBusy {
+  background: rgba(245,166,35,0.1);
+  color: #78350f;
+}
+
+/* FAQ */
+.faqList { display: flex; flex-direction: column; gap: 2px; }
+
+.faqItem {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--gray-50);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 0.2s;
+  gap: 8px;
+}
+
+.faqQuestion:hover { background: rgba(43,191,179,0.08); }
+
+.faqChevron { font-size: 10px; flex-shrink: 0; color: var(--teal); }
+
+.faqAnswer {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  background: rgba(43,191,179,0.04);
+  border-top: 1px solid rgba(43,191,179,0.1);
+}
+
+/* Emergency */
+.emergCard {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #fca5a5;
+}
+
+.emergIcon { font-size: 28px; }
+
+.emergTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7f1d1d;
+}
+
+.emergDesc {
+  font-size: 11px;
+  color: #991b1b;
+  margin-top: 2px;
+}
+
+.emergBtn {
+  margin-left: auto;
+  background: var(--red);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.emergBtn:hover { background: var(--red-dark); }
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; }
+  .heroBanner { flex-direction: column; }
+  .heroRight { margin: 20px 0 0; }
+}

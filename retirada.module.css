@@ -1,0 +1,296 @@
+.heroBanner {
+  background: linear-gradient(135deg, var(--teal) 0%, #1a9e94 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroLeft { flex: 1; }
+
+.heroBadge {
+  display: inline-flex;
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.heroDesc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  max-width: 380px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.heroBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heroBenefit {
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heroBenefit span {
+  background: rgba(255,255,255,0.25);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.heroRight { flex-shrink: 0; margin-left: 40px; }
+
+.heroIllustration {
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.25);
+}
+
+.heroEmoji { font-size: 56px; }
+
+/* Section */
+.section { margin-bottom: 48px; }
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 24px;
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.step {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+  border: 1.5px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+}
+
+.stepNum {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepIcon { font-size: 36px; margin-bottom: 12px; }
+
+.stepTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+.stepArrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--teal);
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* Search */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  border: 2px solid var(--gray-200);
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+
+.searchBox:focus-within { border-color: var(--teal); }
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1;
+  font-family: var(--font-body);
+  color: var(--gray-700);
+  background: transparent;
+}
+
+.searchInput::placeholder { color: var(--gray-400); }
+
+.searchBtn {
+  background: var(--teal);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  transition: background 0.2s;
+}
+
+.searchBtn:hover { background: var(--teal-dark); }
+
+/* Loja cards */
+.lojaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.lojaCard {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1.5px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lojaCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.lojaHeader {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lojaEmoji { font-size: 44px; }
+
+.lojaStatus {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.statusOpen {
+  background: rgba(16,185,129,0.15);
+  color: #065f46;
+}
+
+.statusClosed {
+  background: rgba(239,68,68,0.1);
+  color: var(--red-dark);
+}
+
+.lojaBody { padding: 20px; }
+
+.lojaName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.lojaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.lojaInfo span {
+  font-size: 12px;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lojaBtn {
+  width: 100%;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+  font-family: var(--font-body);
+}
+
+.lojaBtn:hover:not(:disabled) { background: var(--teal-dark); }
+
+.lojaBtn:disabled {
+  background: var(--gray-200);
+  color: var(--gray-400);
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .stepArrow { display: none; }
+  .lojaGrid { grid-template-columns: repeat(2, 1fr); }
+  .heroBanner { flex-direction: column; }
+  .heroRight { margin: 20px 0 0; }
+}
