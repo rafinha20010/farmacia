@@ -6,12 +6,14 @@ export const metadata: Metadata = {
   description: "Sua saúde em primeiro lugar, entrega rápida e segura",
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-   <html>
-      <body>
-        {children}
-      </body>
+    <html lang="pt-BR">
+      <body>{children}</body>
     </html>
-  )
+  );
 }
