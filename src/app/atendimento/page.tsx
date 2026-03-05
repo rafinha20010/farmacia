@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import shared from "../shared.module.css";
+import shared from "./shared.module.css";
 import styles from "./atendimento.module.css";
 
 const faq = [

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import shared from "../shared.module.css";
+import shared from "./shared.module.css";
 import styles from "./ofertas.module.css";
 
 const ofertas = [
